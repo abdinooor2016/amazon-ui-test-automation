@@ -53,6 +53,30 @@ public class AllDriverManager {
         return webDriver;
     }
 
+    private WebDriver createRemoteDriver() {
+        throw new RuntimeException("Remote web driver is not yet implemented");
+    }
 
+    private WebDriver createDriver() {
+        switch (environmentType) {
+            case LOCAL:
+                webDriver = createLocalDriver();
+                break;
+            case REMOTE:
+                webDriver = createRemoteDriver();
+                break;
+        }
+        return webDriver;
+    }
+
+    public WebDriver getDriver() {
+        if (webDriver == null) webDriver = createDriver();
+        return webDriver;
+    }
+
+    public void closeDriver() {
+        webDriver.close();
+        webDriver.quit();
+    }
 
 }
