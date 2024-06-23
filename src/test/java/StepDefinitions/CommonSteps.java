@@ -29,7 +29,7 @@ public class CommonSteps {
     public void isdisplayed(String type) {
         switch (type) {
             case "Hello, Test":
-                Assert.assertEquals(homePage.loggedUserNameIconText(), "Helloo, Test");
+                Assert.assertEquals(homePage.loggedUserNameIconText(), "Hello, Test");
                 break;
             case "Checkout (1 item)":
                 Assert.assertEquals(checkoutPage.checkoutHeaderText(), "Checkout (1 item)");
