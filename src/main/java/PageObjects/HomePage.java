@@ -15,6 +15,12 @@ public class HomePage {
     @FindBy(id ="nav-link-accountList-nav-line-1")
     private WebElement userAccountIcon;
 
+    @FindBy(id ="twotabsearchtextbox")
+    private WebElement searchField;
+
+    @FindBy(id ="nav-search-submit-button")
+    private WebElement searchButton;
+
     public void clickUserAccountIcon() {
         userAccountIcon.isDisplayed();
         userAccountIcon.isEnabled();
@@ -24,5 +30,12 @@ public class HomePage {
     public String loggedUserNameIconText() {
         userAccountIcon.isDisplayed();
         return userAccountIcon.getText();
+    }
+
+    public void searchItem(String item) {
+        searchField.isEnabled();
+        searchField.sendKeys(item);
+        searchButton.isEnabled();
+        searchButton.click();
     }
 }
