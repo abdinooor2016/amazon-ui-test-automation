@@ -46,6 +46,6 @@ The exercise requirement for checkout was to:
 3.	On purchase page select payment method of your type and enter any dummy values
 4.	Validate the failure reason.
 
-In the payment method section, Amazon uses cross origin frame that returns unique ID each time. So its not possible to switch to this frame due to security restrictions. I provided addCardInfo() method, that can switch to frame and enter card information as sample. 
+In the payment method section, Amazon uses cross origin frame that returns unique ID each time. So its not possible to switch to this frame due to security restrictions. I provided addCardInfo() method, that can switch to frame and enter card information as sample however this method param wouldn't know the ID amazon generates. 
 
 
