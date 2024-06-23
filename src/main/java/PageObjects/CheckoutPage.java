@@ -39,7 +39,7 @@ public class CheckoutPage {
     }
 
     public void addCardInfo(String cardNumber, String cardName, String securityCode) {
-        driver.switchTo().frame(1);
+        driver.switchTo().frame(0);
         cardNumberField.isEnabled();
         cardNumberField.sendKeys(cardNumber);
         cardNameField.isEnabled();
