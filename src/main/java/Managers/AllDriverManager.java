@@ -75,7 +75,6 @@ public class AllDriverManager {
     }
 
     public void closeDriver() {
-        webDriver.close();
         webDriver.quit();
     }
 
